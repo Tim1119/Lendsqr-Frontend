@@ -18,6 +18,7 @@ const UsersPage = () => {
 	const [isError, setError] = useState<string | null>(null);
 	const itemsPerPage = 9;
 
+	
 	// Used to show other users not on current page 
 	const handlePageChange = (event: { selected: number; }) => {
 		const newOffset = (event.selected * itemsPerPage) % users.length;
@@ -27,7 +28,7 @@ const UsersPage = () => {
 	const fetchUsers = async () => {
 		setLoading(true);
 		
-		await axios.get(`${process.env.MOCK_API_GENERATOR_URL}`)
+		await axios.get(`${process.env.REACT_APP_MOCK_API_GENERATOR_URL}`)
 			.then((response) => {
 				setUsers(response.data);
 				setLoading(false);

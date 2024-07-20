@@ -56,7 +56,7 @@ const UsersTable = ({users}:UserTableProps) => {
 								<td>0{user?.phoneNumber}</td>
 								<td>{user?.dateJoined}</td>
 								<td>
-									<span className={`user-table__status ${user?.status == 'Active' && "status--active"} ${user?.status == 'Blacklisted' && "status--blacklisted"}  ${user?.status == 'Pending' && "status--pending"} ${user?.status == 'Inactive' && "status--inactive"}`}> {user?.status}</span>
+									<span className={`user-table__status ${user?.status === 'Active' && "status--active"} ${user?.status === 'Blacklisted' && "status--blacklisted"}  ${user?.status === 'Pending' && "status--pending"} ${user?.status === 'Inactive' && "status--inactive"}`}> {user?.status}</span>
 								</td>
 								<td>
 									<img

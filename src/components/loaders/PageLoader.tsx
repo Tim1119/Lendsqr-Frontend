@@ -8,6 +8,7 @@ const PageLoader = () => (
              strokeWidth="5"
              animationDuration="0.75"
              ariaLabel="rotating-lines-loading"
+             strokeColor='#38CDCC'
             />
         </div>
 );
