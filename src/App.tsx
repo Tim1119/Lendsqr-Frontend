@@ -11,7 +11,7 @@ import './App.scss'
 function App() {
 
   const LoginPage = lazy(() => import("./pages/LoginPage"));
-  // const UsersPage = lazy(() => import("./pages/user/UsersPage"));
+  const UsersPage = lazy(() => import("./pages/user/UsersPage"));
   // const UserDetailPage = lazy(() => import("./pages/user/UserDetailPage"));
 
 
@@ -51,10 +51,10 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <Suspense >
-        <RouterProvider router={router} />
-      </Suspense>
-    </ErrorBoundary>
+    <Suspense fallback={<PageLoader />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  </ErrorBoundary>
   )
 }
 
