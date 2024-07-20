@@ -2,98 +2,77 @@
 @import '../../base/typography.scss';
 @import '../../partials/mixins';
 
-.sidebarlink{
-    width: 283px;
-    height: 40px;
-    top: 294px;
-    gap: 0px;
-    opacity: 0.06px;
-    background:$white;
-    margin:5px 0px;
-    display:flex;
-    align-items:center;
-    text-decoration:none;
-    font-family:$workSans;
-    font-weight:400;
-    font-size:16px;
-    color:$blue;     
-}
-.sidebarlink--active{
-    background:$sidebarLinkActive;    
-    border-left:3px solid $turquoise;
-}
-.sidebarlink--hover:hover{
-        background:$sidebarLinkActive;
-}
-.sidebar--header-small{
-    height: 18px;
-    margin-top:28px;
-}
+.sidebar-link {
+  width: 283px;
+  height: 40px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: $workSans;
+  font-weight: 400;
+  font-size: 16px;
+  color: $blue;
+  background: $white;
 
-.sidebarlink--bigger{
-    height:50px;
-    // background:red;
-}
+  &--active {
+    background: $sidebarLinkActive;
+    border-left: 3px solid $turquoise;
+  }
 
-.sidebarlink__icon-container{
-    margin-left:30px;
-    height:100%;
-    // background:blue;
-    display:grid;
-    place-items:center;
-    // display:grid;
-    // place-items:center;  
-}
+  &:hover {
+    background: $sidebarLinkActive;
+  }
 
-.sidebarlink__icon{
-   
-    width:16px;
-    height:12.8px;
-    margin:3px;
-    margin-right:12px;
-    
-}
+  &--large {
+    height: 50px;
+  }
 
-.sidebarlink__title-header{
-    margin-left:30px;
-    font-weight:500;
-    font-size:12px;
-    line-height:14.08px;
-    
-}
-
-.sidebarlink__title{
-    text-decoration:none;
-    font-weight:400;
-}
-
-.sidebarlink__toggle{
-    width: 6.57px;
-    height: 11.21px;
-    top: 3.72px;
-    margin-left:10px;
-    gap: 0px;
-    opacity: 0px;
-}
-
-.sidebarlink__title-header{
-    text-transform:uppercase;
-    font-family:$workSans;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14.08px;
-    text-align: left;
-    color:$slateblue;
-
-}
-
-.sidebarlink__logout{
+  &--logout {
     margin-top: 30px;
     margin-bottom: 5px;
-}
-.sidebarlink__version{
+  }
+
+  &--border-top {
+    border-top: 1px solid $gray;
+  }
+
+  &__icon-container {
+    margin-left: 30px;
+    display: grid;
+    place-items: center;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 12.8px;
+    margin: 3px 12px 3px 0;
+  }
+
+  &__title {
+    flex: 1;
+    text-decoration: none;
+  }
+
+  &__toggle {
+    width: 6.57px;
+    height: 11.21px;
+    margin-left: 10px;
+  }
+
+  &__header {
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.08px;
+    text-transform: uppercase;
+    color: $slateblue;
+  }
+
+  &__version {
     font-family: $workSans;
-    margin-left:30px;
-    margin-bottom:10px;
-    color:$blue;    
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: $blue;
+  }
 }
