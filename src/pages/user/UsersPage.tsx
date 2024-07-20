@@ -19,7 +19,7 @@ const UsersPage = () => {
 	const itemsPerPage = 9;
 
 	// Used to show other users not on current page 
-	const handlePageChange = (event) => {
+	const handlePageChange = (event: { selected: number; }) => {
 		const newOffset = (event.selected * itemsPerPage) % users.length;
 		setItemOffset(newOffset);
 	};
