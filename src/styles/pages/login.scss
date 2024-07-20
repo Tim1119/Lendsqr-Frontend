@@ -2,133 +2,152 @@
 @import '../base/typography.scss';
 @import '../partials/mixins';
 
-.login{
-    width:100%;
-    height:100vh;
-}
-.login__container{
-    display:grid;
-    grid-template-columns:1fr;
-    height:100%;
-
-   
-    @include breakpointLargeScreen{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.login__left-container{
-    margin-left:50px;
-    padding:70px 0px 36px 0px;
-    display:none;
-    gap:50px;
-    background-color:$gray-white;
-    background: #fdfdfd;
-    
-    // @include breakpointMediumScreen{
-    //     display:grid;
-    // }
-
-    @include breakpointLargeScreen{
-        display:grid;
-        margin-left:67px;
-        padding:60px 0px 36px 0px;
-        gap:45px;
-    }
-    @include breakpointExtraLargeScreen{
-        margin-left:67px;
-        padding:70px 0px 36px 0px;
-        gap:50px;
-    }
-}
-
-.login__illustration{
-    padding:10px;
-    width:100%;
-    object-fit:cover;
-       
-}
-
-.login__right-container {
-    display:grid;
-    place-items:center;
-    position:relative; 
-    
-    img{
-        top:60px;
-        position:absolute;
-        width:170px;
-        height:30px;
- 
-        @include breakpointLargeScreen{
-           display:none;
-        }
-    }
-}
-
-
-.login__form-container{
-    width: 80%;  
-    
-    @include breakpointSmallScreen{
-        width: 70%;
-    }
-    @include breakpointMediumScreen{
-        width: 50%;
-    }
-    @include breakpointLargeScreen{
-        width: 60%;
-    }
-
-    h3{
-        font-family: $avenirNext;
-        font-weight: 700;
-        font-size: 34px;
-        line-height: 54px;
-        color:$blue; 
-        margin-top:30px;
-
-        @include breakpointMediumScreen{
-            font-size: 34px;
-            margin-top:0px;
-           
-        }
-        @include breakpointLargeScreen{
-            font-size: 38px;
-        }
-        @include breakpointExtraLargeScreen{
-            font-size: 40px;
-        }
-    }
-
-    p{
-        font-family: $avenirNext;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 27.32px;
-        text-decoration: none;
-        color:$slateblue;
-        font-style: normal;
-        text-align: left;
-        margin-bottom:50px;
-
-        @include breakpointMediumScreen{
-            font-size: 20px;
-        }
-    }
-}
-
-form{
+.login {
     width: 100%;
-    margin: 0px auto;
-    
-   
+    height: 100vh;
 
-    .login-form__input-password{
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100%;
+
+        @include breakpointLargeScreen {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__left {
+        margin-left: 50px;
+        padding: 70px 0 36px;
+        display: none;
+        gap: 50px;
+        background-color: $gray-white;
+        background: #fdfdfd;
+
+        @include breakpointLargeScreen {
+            display: grid;
+            margin-left: 67px;
+            padding: 60px 0 36px;
+            gap: 45px;
+        }
+        @include breakpointExtraLargeScreen {
+            margin-left: 67px;
+            padding: 70px 0 36px;
+            gap: 50px;
+        }
+    }
+
+    &__illustration {
+        padding: 10px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__right {
+        display: grid;
+        place-items: center;
         position: relative;
 
-        .login-form__password-toggler {
-            font-family:$avenirNext;
+        &__logo {
+            top: 60px;
+            position: absolute;
+            width: 170px;
+            height: 30px;
+
+            @include breakpointLargeScreen {
+                display: none;
+            }
+        }
+    }
+
+    &__form {
+        width: 80%;
+
+        @include breakpointSmallScreen {
+            width: 70%;
+        }
+        @include breakpointMediumScreen {
+            width: 50%;
+        }
+        @include breakpointLargeScreen {
+            width: 60%;
+        }
+
+        h3 {
+            font-family: $avenirNext;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 54px;
+            color: $blue;
+            margin-top: 30px;
+
+            @include breakpointMediumScreen {
+                font-size: 34px;
+                margin-top: 0;
+            }
+            @include breakpointLargeScreen {
+                font-size: 38px;
+            }
+            @include breakpointExtraLargeScreen {
+                font-size: 40px;
+            }
+        }
+
+        p {
+            font-family: $avenirNext;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27.32px;
+            color: $slateblue;
+            text-align: left;
+            margin-bottom: 50px;
+
+            @include breakpointMediumScreen {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__input-container {
+        margin: 20px 0;
+
+        input {
+            width: 100%;
+            border: 2px solid $input-border;
+            border-radius: 5px;
+            padding: 13px 10px;
+            font-family: $avenirNext;
+            margin-bottom: 5px;
+            font-size: 14px;
+
+            &::placeholder {
+                font-family: $avenirNext;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19.12px;
+                color: $slateblue;
+                opacity: 60%;
+            }
+
+            &:focus {
+                border-color: $turquoise;
+                outline: none;
+            }
+        }
+    }
+
+    &__error {
+        font-family: $avenirNext;
+        color: $form-error;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    &__password {
+        position: relative;
+
+        &-toggler {
+            font-family: $avenirNext;
             position: absolute;
             right: 15px;
             top: 50%;
@@ -141,68 +160,27 @@ form{
         }
     }
 
-    small{
-        font-family:$avenirNext;
+    small {
+        font-family: $avenirNext;
         font-size: 12px;
-        font-weight:600;
+        font-weight: 600;
         line-height: 16.39px;
         text-align: left;
-        color:$turquoise;
+        color: $turquoise;
         text-transform: uppercase;
         letter-spacing: 1px;
-        
-        
-        &:hover{
+
+        &:hover {
             color: darken($turquoise, 5%);
             cursor: pointer;
-        }        
-    }
-
-    button{
-       @include form-button;
-       display:flex;
-       gap:20px;
-       align-items:center;
-       justify-content:center;
-    }
-
-    .login-form__error-message{
-        font-family:$avenirNext;
-        color:$form-error;
-		font-size: 14px;
-        margin-top:5px;
-    }
-}
-
-
-.login__input-container{
-    margin:20px 0px;
-    
-    input {
-        width: 100%;
-        border:2px;
-        border-radius: 5px;
-        padding: 13px 10px;
-        border: 2px solid $input-border;
-        border-radius: 5px;
-        font-style: normal; 
-        font-family: $avenirNext;
-        margin-bottom:5px;
-        font-size: 14px;
-       
-
-        &::placeholder {
-            font-family: $avenirNext;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 19.12px;
-            color: $slateblue;
-            opacity: 60%;
         }
+    }
 
-        &:focus{
-            border-color: $turquoise; // This changes the border color on focus
-            outline: none;
-        }
+    button {
+        @include form-button;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
     }
 }
