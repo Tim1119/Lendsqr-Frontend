@@ -1,0 +1,86 @@
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
+
+.user-details-main {
+    background-color:$white;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 30px;
+    margin-top: 30px;
+    font-family:$workSans;
+
+    .user-details-main__card {
+        border-bottom: 1px solid #21407d5a;
+        &:last-child {
+            border-bottom: none;
+        }
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        h2 {
+            color: $blue;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18.77px;
+            text-align: left;
+            margin-bottom: 30px;
+            font-family:$workSans;
+
+        }
+        .user-details-main__info{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            div {
+                margin-right: 2%;
+                min-width: 120px;
+            }
+        }
+        
+        p {
+            color: $slateblue;
+            &:first-child {
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-bottom: 8px;
+                font-weight: 400;
+                line-height: 14.08px;
+                color:$slateblue;
+                text-wrap:wrap;
+            }
+            &:last-child {
+                font-size: 16px;
+                font-weight: 500;
+                line-height:18.77px;
+                color:$slateblue;
+                text-transform: capitalize;
+                text-wrap:wrap;
+            }
+        }
+        
+    }    
+}
+
+.user-details-main .user-details-main__card:nth-child(1) .user-details-main__info {
+
+    display: flex;
+    align-items: center;
+    flex-basis: 1 1 1 1 1;    
+  }
+
+
+.user-details-main .user-details-main__card:nth-child(2) .user-details-main__info {
+    display: grid;
+    grid-template-columns: 1fr   ;
+    justify-content: space-between;
+
+     @include breakpointSmallScreen{
+        grid-template-columns: 1fr 1.5fr    ;
+    }
+     @include breakpointLargeScreen{
+        grid-template-columns: 1fr 1.5fr 1fr 1fr   ;
+    }
+  }
+
+

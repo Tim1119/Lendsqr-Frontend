@@ -1,0 +1,39 @@
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
+
+.usersInfoCard{
+    width: 100%;
+    height: 160px;
+    border: 1px 0px 0px 0px;
+    border-width: 0px, 0px, 0px, 0px;
+    border-style: solid;
+    box-shadow:$userInfoBorderShadowColor;
+    border-color:$userInfoBorderColor;
+    padding:20px;
+}
+
+.usersInfoCard__icon{
+    width: 40px;
+    height: 40px;
+}
+
+.usersInfoCard__title{
+    font-family:$workSans;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.42px;
+    text-align: left;
+    color:$slateblue;
+    margin:10px 0px;
+    text-transform: uppercase;
+}
+
+.usersInfoCard__stat{
+    font-family:$workSans;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    color:$blue;
+}
+

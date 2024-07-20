@@ -1,0 +1,196 @@
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
+
+.user-details-header{
+    height:210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 20px 20px 0px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.04) 3px 5px 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(33, 63, 125, 0.06);
+}
+
+
+.user-details-header__top-info{
+    display:flex;
+    align-items: center;
+    height:140px;
+    width: 600px;
+
+    @include breakpointSmallScreen{
+        width: 98%;        
+    }
+    @include breakpointMediumScreen{
+        width: 90%;
+    }
+    @include breakpointLargeScreen{
+        width: 96%;
+    }
+    @include breakpointExtraLargeScreen{
+        width: 70%;
+    }
+}
+
+.user-details-header__profile-and-name-container{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    flex:0.4;
+
+    .user-details-header__profile-container img{
+
+        width: 50px;
+        height: 50px;
+       border: none;
+       border-radius: 50%;
+       object-fit: cover;
+       display: grid;
+       place-items: center;
+
+       @include breakpointLargeScreen{
+        width: 60px;
+        height: 60px;
+        }
+       @include breakpointLargeScreen{
+        width: 80px;
+        height: 80px;
+        }
+    }
+
+.user-details-header__default-profile-container{
+
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: $profileContainerBg;
+    display: grid;
+    place-items: center;
+
+
+    @include breakpointLargeScreen{
+        width: 80px;
+        height: 80px;
+        }
+
+        .img{
+            width: 22.92px;
+            height: 24.3px;
+        }               
+    }
+}
+
+.user-details-header__name-and-id{
+    h3{
+        @include  personalDetailHeader;
+    }
+    p{
+        @include  personalDetailSubHeading;
+    }
+}
+
+.user-details-header__top-info-user-tier{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    border-left: 1px solid $userDetailHeaderBorder;
+    border-right: 1px solid $userDetailHeaderBorder;
+    flex:0.2;
+
+    h4{
+        font-family:$workSans;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.42px;
+        text-align: left;
+        color:$slateblue;
+    }
+
+    .user-details-header__rating{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:5px;
+        margin-top: 5px;
+    }
+}
+
+.user-details-header__top-info-bank-and-amount{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    flex:0.4;
+
+    h3{
+        @include  personalDetailHeader;
+    }
+    p{
+        @include  personalDetailSubHeading;
+    }
+}
+
+.user-details-header__Bottom-Info{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+
+    @include breakpointSmallScreen{
+        width: 800px;
+    }
+    @include breakpointMediumScreen{
+        width: 900px;
+    }
+    @include breakpointLargeScreen{
+        min-width: 900px;
+        width: 100%;
+    }
+
+
+    div{
+        font-family:$workSans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.77px;
+        text-align: center;
+        flex:1;
+        margin:0px 1px;
+        height:29px;
+        display: grid;
+        place-items: center;
+        color:$black;
+
+        @include breakpointSmallScreen{
+            font-size: 16px;
+        }
+
+        &:first-child{
+            border-bottom: 2px solid $turquoise;
+            color:$turquoise;
+        }
+
+        
+        li{
+            list-style-type: none;
+        }
+
+        li:hover{
+            cursor: pointer;
+        }
+
+    }
+}
+

@@ -1,0 +1,63 @@
+@import '../base/colors.scss';
+@import '../base/typography.scss';
+@import '../partials/mixins';
+
+.users-page__paginate {
+	font-family: $workSans;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 23px;
+	color: $slateblue;
+	font-size: 14px;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+	@include breakpointMediumScreen{
+		flex-direction: row;
+		gap: 20px;
+		align-items: center;
+	}
+	.users-page__paginate-info {
+		span {
+			padding: 7px 10px;
+			color: $blue;
+			font-weight: 500;
+			background-color: rgba(33, 63, 125, 0.1);
+			border-radius: 4px;
+			img {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.users-page__pagination-container {
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		list-style: none;
+		.users-page__active-page {
+			color: $blue;
+			font-weight: 500;
+		}
+		.users-page__page-link {
+			cursor: pointer;
+		}
+		.users-page__next-and-previous-page {
+			cursor: pointer;
+			height: 24px;
+			width: 24px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(33, 63, 125, 0.1);
+			border-radius: 4px;
+		}
+	}
+}
+
+.users-page__error{
+	color:red;
+    font-family:$workSans;
+    text-align:center;
+}

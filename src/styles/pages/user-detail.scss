@@ -1,0 +1,72 @@
+@import '../base/colors.scss';
+@import '../base/typography.scss';
+@import '../partials/mixins';
+
+
+.users-detail-page__back-page-icon{
+    display:flex;
+    align-items: center;
+    // background-color: red;
+    width: fit-content;
+    text-decoration: none;
+    gap:10px;
+    color:$slateblue;
+    text-decoration: none;
+    font-family:$workSans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.77px;
+    text-align: left;
+
+}
+.users-detail-page__back-page-icon img{
+    width:30px;
+    height:30px;
+}
+
+.users-detail-page__page-title{
+    @include pageTitle;
+}
+
+.users-detail-page__activate-button{
+    @include small-button;
+    @include button-primary;
+    &:hover{
+        cursor:pointer;
+    }
+}
+.users-detail-page__blacklist-button{
+    @include small-button;
+    @include button-danger;
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+.users-detail-page__header-container{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:20px 0px;
+    gap:20px;
+
+    @include breakpointMediumScreen{
+        flex-direction: row;
+        align-items: center;
+    }   
+
+    div{
+        display: flex;
+        align-items: center;
+        gap:20px;
+    }
+
+}
+
+
+.user-detail-page__error{
+    color:red;
+    font-family:$workSans;
+    text-align:center;
+}

@@ -1,0 +1,101 @@
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
+
+
+.users-table {
+    font-family: $workSans;
+	padding: 0px 30px;
+	margin-top: 40px;
+	background-color:$white;
+	border: 1px solid rgba(33, 63, 125, 0.06);
+	box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+	border-radius: 4px;
+	width: 100%;
+	overflow-x: auto;
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		color: $slateblue;
+		overflow-x: auto;
+		thead {
+			tr {
+				th {
+					position: relative;
+					font-size: 12px;
+					font-weight: 600;
+					text-transform: uppercase;
+					padding: 20px 20px 20px 0px;
+					text-align: left;
+					max-width: 150px;
+					word-wrap: break-word;
+					
+					@include breakpointSmallScreen {
+						max-width: 200px;
+					}
+                    
+					div {
+						display: flex;
+						align-items: center;
+						gap: 5px;
+						img {
+							cursor: pointer;
+						}
+					}
+					&:last-child {
+						min-width: 20px;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+                .user-table__status{
+                    padding: 6px 10px;
+					border-radius: 100px;
+					font-size: 14px;
+                }
+                .status--active{
+                    color:$statusActiveText;
+                    background-color: $statusActiveBg;
+                }
+                .status--blacklisted{
+                    color:$statusBlacklistText;
+                    background-color: $statusBlacklistBg;  
+                }
+                .status--inactive{
+                    color:$statusInActiveText;
+                    background-color: $statusInActiveBg;
+                }
+                .status--pending{
+                    color:$statusPendingText;
+                    background-color: $statusPendingBg;
+                }
+
+				
+				td {
+					font-size: 14px;
+					font-weight: 400;
+					max-width: 200px;
+					padding: 20px 20px 20px 0;
+					text-transform: capitalize;
+					border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+					word-wrap: break-word;
+					&:last-child {
+						position: relative;
+						img {
+							cursor: pointer;
+						}
+					}
+				}
+				a {
+					color: $slateblue;
+					text-decoration: none;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}

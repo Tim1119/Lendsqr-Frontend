@@ -1,0 +1,21 @@
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
+
+
+.usersInfoCardRow{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin:30px 0px;
+
+    @include breakpointSmallScreen{
+        grid-template-columns: repeat(2 minmax(0, 1fr));
+    }   
+    @include breakpointMediumScreen{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    @include breakpointLargeScreen{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}

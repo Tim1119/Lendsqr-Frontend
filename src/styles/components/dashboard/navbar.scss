@@ -1,0 +1,204 @@
+@import '../../base/colors.scss';
+@import '../../base/typography.scss';
+@import '../../partials/mixins';
+
+.navbar{
+    height:100px;
+    background-color:$white;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-family:$workSans;
+    box-shadow:$navbar-box-shadow;
+    position:fixed;
+    top:0px;
+    z-index: 999;
+}
+
+.navbar__left-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    margin-left:20px;
+    gap:20px;
+
+    @include breakpointLargeScreen{
+        margin-left:30px;
+       }    
+    .navbar__hamburger-large-screen-container{
+        display:none;
+
+        @include breakpointMediumScreen{
+            display:inline-grid;
+            place-items:center;
+          
+        }  
+
+        @include breakpointLargeScreen{
+            display:none;
+        }  
+    }
+
+    .navbar__hamburger-large-screen{ 
+        width:32px;
+        height:32px;
+        cursor:pointer;
+        object-fit:contain;
+        margin-top:-20px;
+    }
+}
+
+.navbar__logo{
+    width:116px;
+    height:30px;    
+    cursor:pointer;   
+}
+
+.navbar__middle-container{
+    width:400px;
+    max-width:400px;
+    height:100%;
+   align-items:center;
+   justify-items:center;
+   display:none;
+
+   @include breakpointLargeScreen{
+    display:flex;
+   }
+       
+    input {
+                
+        width: 400px;
+        height: 40px;
+        top: 30px;
+        left: 343px;
+        gap: 0px;
+        padding:12px 20px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        opacity: 0px;
+        border:1px solid $input-border;
+        outline:none;
+        font-family:$workSans;
+    
+    }
+
+    input:focus{
+        border-color:$turquoise;
+    }
+    input::placeholder{
+        font-family:$workSans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.42px;
+        text-align: left;
+
+
+    }
+
+    button{
+        width: 56px;
+        height: 40px;
+        top: 30px;
+        left: 687px;
+        gap: 0px;
+        opacity: 0px;
+        outline:none;
+        border:none;
+        cursor:pointer;
+        background-color:$turquoise;
+        display:grid;
+        place-items:center;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+}
+
+
+.navbar__right-container{
+    
+   display:none;
+
+    @include breakpointMediumScreen{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin-right:25px;
+       }
+       
+
+    .navbar__docs-link{
+        text-decoration:underline;
+        font-family:$roboto;
+         margin-right:40px;
+        cursor:pointer;
+    }
+
+    .navbar__notification{
+         margin-right:30px;
+        cursor:pointer;
+    }
+
+    .navbar__profile{
+        display:flex;
+        align-items:center;
+        justify-items:space-between;
+        gap:4px;
+        font-family:$workSans;
+        font-weight:500;
+        cursor:pointer;
+
+            .navbar__profile-picture{
+                width:48px;
+                height:48px;
+                border-radius:50%;
+                cursor:pointer;
+            }
+
+            .navbar__chevron{
+                width: 7.34px;
+                height: 4.15px;
+                top: 8.18px;
+                left: 6.33px;
+                gap: 0px;
+                opacity: 0px;
+            }
+
+            
+    }
+    .navbar__hamburger{
+        display:inline-flex;
+
+
+        @include breakpointMediumScreen{
+            display:none;
+        }
+    }
+}
+
+.navbar__hamburger-small-screen-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:fit-content;
+    margin-right:30px;
+    
+
+    @include breakpointMediumScreen{
+        display:none;
+    }
+   }
+
+.navbar__hamburger-small-screen{
+    width:32px;
+    height:32px;
+    cursor:pointer;
+    object-fit:contain;
+}
+
+.navbar--toggle-z-index{
+    z-index: 999;
+}

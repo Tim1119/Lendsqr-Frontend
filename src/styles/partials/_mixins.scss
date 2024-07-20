@@ -1,0 +1,155 @@
+@import '../base/colors';
+
+
+@mixin input-mixin($type) {
+    margin:20px 0px;
+    background-color: red;
+    
+    input[type="#{$type}"] {
+        width: 100%;
+        border:2px;
+        border-radius: 5px;
+        padding: 13px 10px;
+        border: 2px solid $input-border;
+        border-radius: 5px;
+        font-style: normal; 
+        font-family: $avenirNext;
+        margin-bottom:5px;
+       
+
+        &::placeholder {
+            font-family: $avenirNext;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19.12px;
+            color: $slateblue;
+            opacity: 60%;
+        }
+
+        &:focus{
+            border-color: $turquoise; // This changes the border color on focus
+            outline: none;
+        }
+    }
+}
+
+@mixin form-button{
+    width: 100%;
+    height:48px;
+    background-color:$turquoise;
+    border-radius: 8px;
+    font-family:$avenirNext;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19.12px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color:$white;
+    outline: none;
+    border: none;
+    margin:15px 0px;
+
+    &:hover{
+        background-color: darken($turquoise, 10%);
+        cursor: pointer;
+    }
+}
+
+
+// Screen Breakpoints
+@mixin breakpointSmallScreen {
+	@media (min-width: 640px) {
+		@content;
+	}
+}
+
+@mixin breakpointMediumScreen {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin breakpointLargeScreen {
+    @media (min-width: 1024px) {
+        @content;
+	}
+}
+
+@mixin breakpointExtraLargeScreen {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin pageTitle{
+    width:fit-content;
+    height: 28px;
+    font-family:$workSans;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.15px;
+    text-align: left;
+    color:$blue;
+}
+
+@mixin small-button{
+    width: 170px;
+    height: 40px;
+    border-radius: 8px;
+    opacity: 0px;
+    font-family:$workSans;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.42px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@mixin button-primary{
+    color:$turquoise;
+    border: 1px solid $turquoise;
+}
+
+@mixin button-danger{
+    color:$btn-danger;
+    border: 1px solid $btn-danger;
+}
+
+@mixin personalDetailHeader{
+    font-family:$workSans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.81px;
+    text-align: left;
+    color:$blue;
+
+    @include breakpointSmallScreen{
+        font-size: 16px;
+    }
+    @include breakpointMediumScreen{
+        font-size: 18px;
+    }
+
+    @include breakpointLargeScreen{
+      font-size: 20px;
+    }
+    @include breakpointExtraLargeScreen{
+        font-size: 22px;
+    }
+}
+
+@mixin personalDetailSubHeading{
+    font-family:$workSans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.42px;
+    text-align: left;
+    margin-top: 5px;
+    color:$blue;
+
+    @include breakpointMediumScreen{
+        font-size: 14px;
+    }
+
+}

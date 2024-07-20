@@ -1,0 +1,57 @@
+// This are my font definitions for Avenir next
+// The font weights are 400,600 and 700 as specified in the figma design
+
+
+// Avenir Next
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../../assets/fonts/avenir-next/AvenirNextLTPro-It.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../../assets/fonts/avenir-next/AvenirNextLTPro-Regular.otf') format('opentype');
+    font-weight: 600; 
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../../assets/fonts/avenir-next/AvenirNextLTPro-Bold.otf') format('opentype');
+    font-weight: 700; 
+}
+
+
+
+// WorkSans
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../../assets/fonts/work-sans/WorkSans-Regular.ttf') format('opentype');
+    font-weight: 400; 
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../../assets/fonts/work-sans/WorkSans-Medium.ttf') format('opentype');
+    font-weight: 500; 
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('../../assets/fonts/work-sans/WorkSans-SemiBold.ttf') format('opentype');
+    font-weight: 600; 
+}
+
+// Robot Font Face
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../assets/fonts/roboto/Roboto-Regular.ttf') format('opentype');
+    font-weight: 400; 
+}
+
+$roboto: 'Roboto', sans-serif;
+$workSans: 'Work Sans', sans-serif;
+$avenirNext: 'Avenir Next', sans-serif;
+
+

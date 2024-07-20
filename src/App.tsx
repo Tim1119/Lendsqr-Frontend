@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import {lazy,Suspense} from 'react'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import  PageLoader from './components/loaders/PageLoader';
+// import ErrorPage from './pages/error/ErrorPage';
+// import DashboardLayout from './layout/DashboardLayout';
+// import ErrorBoundary from './components/errors/ErrorBoundary';
+// import PageNotFound from './pages/error/PageNotFound';
+import './App.scss'
+
 
 function App() {
+
+  const LoginPage = lazy(() => import("./pages/LoginPage"));
+  // const UsersPage = lazy(() => import("./pages/user/UsersPage"));
+  // const UserDetailPage = lazy(() => import("./pages/user/UserDetailPage"));
+
+
+  const router = createBrowserRouter([
+    {
+      path: "",
+      element: <LoginPage />,
+      // errorElement: <ErrorPage />,
+    },
+   
+  ]);
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <ErrorBoundary>
+      <Suspense >
+        <RouterProvider router={router} />
+      </Suspense>
+    // </ErrorBoundary>
+  )
 }
 
-export default App;
+export default App
