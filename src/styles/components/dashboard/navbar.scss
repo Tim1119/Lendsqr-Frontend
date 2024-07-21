@@ -135,6 +135,7 @@
         font-family:$roboto;
          margin-right:40px;
         cursor:pointer;
+        color: $blue;
     }
 
     .navbar__notification{
@@ -150,6 +151,7 @@
         font-family:$workSans;
         font-weight:500;
         cursor:pointer;
+        color: $blue;
 
             .navbar__profile-picture{
                 width:48px;

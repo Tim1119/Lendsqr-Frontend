@@ -2,133 +2,77 @@
 @import '../../base/typography.scss';
 @import '../../partials/mixins';
 
-.sidebar {
-  width: 283px;
-  height: 100vh;
-  top: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: $white;
-  z-index: 999;
-  transition: all 0.5s;
-  position: absolute;
-  left: -280px;
+.sidebar{
+    width:283px;
+    
+    height:100vh;
+    top:0px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background-color:$white;
+    z-index:999;
+    transition: all 0.5s;
+    position:absolute;
+    left:-280px;
 
-  @include breakpointLargeScreen {
-    z-index: 0;
-    left: 0;
-    position: fixed;
-  }
-
-  &__header {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 33px;
-
-    &__close-icon-container {
-      display: none;
-      margin-top: -10px;
-
-      @include breakpointMediumScreen {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @include breakpointLargeScreen {
-        display: none;
-      }
-    }
-
-    &__close-icon {
-      width: 28px;
-      height: 28px;
-      cursor: pointer;
-      object-fit: contain;
-    }
-  }
-
-  &__logo {
-    width: 116px;
-    height: 30px;
-    cursor: pointer;
-  }
-
-  &--open {
-    left: 0;
-  }
-
-  &__link {
-    width: 283px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-family: $workSans;
-    font-weight: 400;
-    font-size: 16px;
-    color: $blue;
-    margin: 5px 0;
-
-    &--active {
-      background: $sidebarLinkActive;
-      border-left: 3px solid $turquoise;
-    }
-
-    &:hover {
-      background: $sidebarLinkActive;
-    }
-
-    &__icon-container {
-      margin-left: 30px;
-      display: grid;
-      place-items: center;
-    }
-
-    &__icon {
-      width: 16px;
-      height: 12.8px;
-      margin: 3px;
-      margin-right: 12px;
-    }
-
-    &__title {
-      text-decoration: none;
-      font-weight: 400;
-    }
-
-    &__toggle {
-      width: 6.57px;
-      height: 11.21px;
-      margin-left: 10px;
-    }
-
-    &__header {
-      text-transform: uppercase;
-      font-family: $workSans;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 14.08px;
-      color: $slateblue;
-      margin-left: 30px;
-    }
-
-    &__logout {
-      margin-top: 30px;
-      margin-bottom: 5px;
-    }
-
-    &__version {
-      font-family: $workSans;
-      margin-left: 30px;
-      margin-bottom: 10px;
-      color: $blue;
-    }
-  }
+    
+    @include breakpointLargeScreen{
+        z-index:0;
+        left:0px;
+        position:fixed;
+       }    
+    
 }
 
-.border--top {
-  border-top: 1px solid #21407d5a;
+.sidebar__nav-header{
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:0px 33px;
+
+    .sidebar__logo{
+        width:116px;
+        height:30px;    
+        cursor:pointer;
+    }
+
+    .sidebar__close-icon-container{
+        display:none;
+        margin-top:-10px;
+
+        @include breakpointMediumScreen{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        @include breakpointLargeScreen{
+            display:none;
+        }
+    }
+    .sidebar__close-icon{
+        width:28px;
+        height:28px;
+        cursor:pointer;
+        object-fit:contain;
+    }
+}
+
+.sidebar--toggle{
+    position:absolute;
+    left:0px;
+}
+
+.border--top{
+    border-top: 1px solid #21407d5a;
+}
+
+// .sidebar__main-links{
+//     background-color: red;
+//     margin-top: 300px;
+// }
+.--topmost-links{
+    // background-color: red;
+    margin-top: 20px;
 }
