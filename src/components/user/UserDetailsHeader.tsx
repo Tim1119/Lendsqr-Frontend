@@ -3,12 +3,12 @@ import positiveRatingIcon from '../../assets/icons/pages/positive-rating.svg'
 import emptyRatingIcon from '../../assets/icons/pages/empty-rating.svg'
 import { User } from '../../types/user'
 
-interface UserDetailsHeader{
+interface UserDetailsHeaderProps{
     user:User;
 }
 
 
-const UserDetailsHeader = ({user}:UserDetailsHeader) => {
+const UserDetailsHeader = ({user}:UserDetailsHeaderProps) => {
    
   return (
     <div data-testid="detail-page-top-card" className='user-details-header' >
