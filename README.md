@@ -1,46 +1,62 @@
-# Getting Started with Create React App
+# Lendsqr Frontend Engineer Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About Lendsqr
+LendSqr is a Lending-as-a-service company (LAAS) based in Lagos, Nigeria. Lendsqr is on a mission to help everyone get the loan that they need to get a better life.It does this by simplifying the lending process using easy but sophisticated technology that can guarantee an awesome loan experience for both the lender and the borrower. 
 
-## Available Scripts
+## Project Background 
+At Lendsqr, many of our lenders use web apps to reach over half a million customers. At this scale, we use React with TypeScript and SCSS as its frontend software development stack which allows us to rapidly ideate and release features rapidly and reliably.
 
-In the project directory, you can run:
+## Project Overview 
+This project was completed as the assessment test for the role of Frontend Engineer at Lendsqr.
+The aim of the assessment is to replicate a mirror image of the figma design below using react, typescript and scss, fetching users data from mock api endpoints and ensuring the application is responsive.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+--> Mock api endpoints
 
-### `npm test`
+To fetch all users 
+https://pewter-feather-airbus.glitch.me/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+to fetch a single user
+https://pewter-feather-airbus.glitch.me/users/{userId}
 
-### `npm run build`
+## Technologies / Libraries / Tools Used
+Required
+1. React
+2. Typescript
+3. SCSS
+4. Jest
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Others Include
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. React Loader Spinner
+6. React Hook Form
+7. React Paginate
+8. Axios
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to Install / Run Project
+For development, you will only need Node.js installed on your PC.
 
-### `npm run eject`
+[Node](http://nodejs.org/) is really easy to install .It also has a package manager  [NPM](https://npmjs.org/).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Install Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    $ git clone https://github.com/Tim1119/lendsqr-fe-test.git
+    $ cd lendsqr-fe-test
+    $ npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Start Project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    $ npm run dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To start project in development mode 
+
+## Build Project for production
+
+    $ npm run build
+
+## Run Tests
+
+    $ npm run test
