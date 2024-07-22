@@ -4,6 +4,7 @@ import axios from 'axios';
 import UsersTable from '../../components/table/UsersTable';
 import { useEffect, useState } from 'react';
 import downArrowIcon from '../../assets/icons/pages/down-arrow.svg'
+
 import '../../styles/pages/users.scss'
 import PageLoader from '../../components/loaders/PageLoader';
 
@@ -28,7 +29,7 @@ const UsersPage = () => {
 	const fetchUsers = async () => {
 		setLoading(true);
 		
-		await axios.get(`${process.env.REACT_APP_MOCK_API_GENERATOR_URL}`)
+		await axios.get(`${import.meta.env.VITE_MOCK_API_GENERATOR_URL}`)
 			.then((response) => {
 				setUsers(response.data);
 				setLoading(false);

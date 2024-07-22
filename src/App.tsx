@@ -1,11 +1,12 @@
 import {lazy,Suspense} from 'react'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PageLoader from './components/loaders/PageLoader';
+import  PageLoader from './components/loaders/PageLoader';
 import ErrorPage from './pages/error/ErrorPage';
 import DashboardLayout from './layouts/DashboardLayout';
 import ErrorBoundary from './components/errors/ErrorBoundary';
 import PageNotFound from './pages/error/PageNotFound';
 import './App.scss'
+import React from 'react';
 
 
 function App() {
@@ -45,16 +46,15 @@ function App() {
       path: "*",
       element: <PageNotFound />,
     },
-   
   ]);
   
 
   return (
     <ErrorBoundary>
-    <Suspense fallback={<PageLoader />}>
-      <RouterProvider router={router} />
-    </Suspense>
-  </ErrorBoundary>
+      <Suspense fallback={<PageLoader />}>
+        <RouterProvider router={router} />
+      </Suspense>
+    </ErrorBoundary>
   )
 }
 

@@ -33,7 +33,7 @@ const UserDetailPage = () => {
           setUser(JSON.parse(cachedUser));
         } else {  
           // Fetch user details from API if not stored in local Storage 
-          const response = await axios.get<User>(`${process.env.REACT_APP_MOCK_API_GENERATOR_URL}/users/${userId}`);
+          const response = await axios.get<User>(`${import.meta.env.VITE_MOCK_API_GENERATOR_URL}/users/${userId}`);
           setUser(response.data);
           localStorage.setItem(`user-${userId}`, JSON.stringify(response.data));
           
