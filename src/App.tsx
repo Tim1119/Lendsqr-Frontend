@@ -6,7 +6,7 @@ import DashboardLayout from './layouts/DashboardLayout';
 import ErrorBoundary from './components/errors/ErrorBoundary';
 import PageNotFound from './pages/error/PageNotFound';
 import './App.scss'
-import React from 'react';
+
 
 
 function App() {
