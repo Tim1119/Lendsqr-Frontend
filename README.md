@@ -7,8 +7,7 @@ LendSqr is a Lending-as-a-service company (LAAS) based in Lagos, Nigeria. Lendsq
 At Lendsqr, many of our lenders use web apps to reach over half a million customers. At this scale, we use React with TypeScript and SCSS as its frontend software development stack which allows us to rapidly ideate and release features rapidly and reliably.
 
 ## Project Overview 
-This project was completed as the assessment test for the role of Frontend Engineer at Lendsqr.
-The aim of the assessment is to replicate a mirror image of the figma design below using react, typescript and scss, fetching users data from mock api endpoints and ensuring the application is responsive.
+The aim of this project is to replicate a mirror image of the figma design below using react, typescript and scss, fetching users data from mock api endpoints and ensuring the application is responsive.
 
 
 
