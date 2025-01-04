@@ -30,12 +30,12 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="login__input-container">
-        <input type="email" placeholder="Email" {...register("email", { required: true })} />
+        <input type="email" placeholder="Email e.g admin" {...register("email", { required: true })} />
         {errors.email && <span className="login__error">Email Address is required</span>}
       </div>
       <div className="login__input-container">
         <div className="login__password">
-          <input type={showPassword ? "text" : "password"} placeholder="Password" {...register("password", { required: true })} />
+          <input type={showPassword ? "text" : "password"} placeholder="Password e.g password" {...register("password", { required: true })} />
           <span className="login__password-toggler" onClick={togglePassword}>{showPassword ? "HIDE" : "SHOW"}</span>
         </div>
         {errors.password && <span className="login__error">Password is required</span>}
